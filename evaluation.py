@@ -177,7 +177,7 @@ elif args.mode==2:
     all_f1 = []
     all_specificity = []
 
-    y_true = df_gt['prediction'].values.tolist()
+    y_true = df_gt['guidance'].values.tolist()
     y_pred = df_pred['prediction'].values.tolist()
     print(y_true)
     get_cm_guidance(y_true, y_pred)
