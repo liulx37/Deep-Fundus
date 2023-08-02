@@ -52,15 +52,8 @@ def get_cm(y_true, y_pred):
     plt.ylabel('ground truth', fontdict={"family": "Arial", "size": 16})
     plt.title('confusion matrix', fontdict={"family": "Arial", "size": 16})
 
-    # plt.rcParams两行是用于解决标签不能显示汉字的问题
-    # plt.rcParams['font.sans-serif'] = ['SimHei']
-    # plt.rcParams["font.family"] = "sans-serif"
-    # # plt.rcParams["font.family"] = "Arial"
-    # plt.rcParams['axes.unicode_minus'] = False
-
-    # 显示数据
-    for first_index in range(len(confusion)):  # 第几行
-        for second_index in range(len(confusion[first_index])):  # 第几列
+    for first_index in range(len(confusion)):  
+        for second_index in range(len(confusion[first_index])):  
             print(first_index, second_index)
             # plt.text(first_index, second_index, confusion[first_index][second_index])
             plt.text(first_index, second_index, confusion[second_index][first_index], size=16)
